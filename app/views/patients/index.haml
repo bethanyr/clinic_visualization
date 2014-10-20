@@ -1,0 +1,9 @@
+%h1 Patients
+%table.table.table-striped
+  %thead
+    %tr
+      %th Name
+    %tr
+    -@patients.each do |patient|
+      %td 
+        =patient.name

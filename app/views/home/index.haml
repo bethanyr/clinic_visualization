@@ -1,10 +1,13 @@
-%h1 Welcome to the Clinic Visualization Tool
+= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track' => true
+= render 'shared/top_navigation'
+.container-fluid
+  .row
+    - if user_signed_in?
+      .col-sm-3.col-md-2.sidebar
+        = render 'shared/side_navigation'
 
-- if user_signed_in?
-  %li= link_to 'Edit account', edit_user_registration_path
-  %li= link_to 'Sign out', destroy_user_session_path, :method=>'delete'
-- else
-  %li= link_to 'Sign in', new_user_session_path
-  %li= link_to 'Sign up', new_user_registration_path
-- if user_signed_in?
-  %h2 You are signed in
+      .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+        = render 'general'
+    - else
+      Please sign in
+

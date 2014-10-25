@@ -10,11 +10,16 @@
     .navbar-collapse.collapse
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
+          %li 
+            Patient
+            %input
+            %button Select
           %li= link_to 'Dashboard', root_path
-          
           %li= link_to 'Profile', edit_user_registration_path
           %li= link_to 'Sign out', destroy_user_session_path, :method=>'delete'
           %li= link_to 'Help'
+          - if current_user.admin?
+            %li= link_to 'Admin', admin_root_path 
         - else
           %li= link_to 'Sign in', new_user_session_path
           %li= link_to 'Sign up', new_user_registration_path

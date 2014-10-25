@@ -1,2 +1,10 @@
-%h1.page-header Dashboard
-= link_to 'List of patients', patients_path
+%h1.page-header Patients
+%table.table.table-striped
+  %thead
+    %tr
+      %th Name
+    
+    -@patients.each do |patient|
+      %tr
+        %td 
+          =patient.name

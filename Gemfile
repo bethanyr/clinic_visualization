@@ -36,6 +36,13 @@ gem 'rails_12factor'
 
 gem 'devise'
 
+gem 'nokogiri'
+
+gem 'activeadmin', github: 'activeadmin'
+
+gem 'angularjs-rails'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

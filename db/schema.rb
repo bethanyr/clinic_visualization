@@ -11,10 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141019233412) do
+ActiveRecord::Schema.define(version: 20141025195535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "active_admin_comments", force: true do |t|
+    t.string   "namespace"
+    t.text     "body"
+    t.string   "resource_id",   null: false
+    t.string   "resource_type", null: false
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
+  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
+
+  create_table "allergies", force: true do |t|
+    t.string   "name"
+    t.date     "start_date"
+    t.string   "symptoms"
+    t.string   "treatment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "doctors", force: true do |t|
+    t.string   "name"
+    t.string   "specialty"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "patients", force: true do |t|
     t.string   "name"
@@ -39,9 +70,27 @@ ActiveRecord::Schema.define(version: 20141019233412) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "admin"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "visits", force: true do |t|
+    t.date     "visit_date"
+    t.string   "chief_complaint"
+    t.string   "diagnosis"
+    t.string   "icd_9"
+    t.string   "height"
+    t.integer  "weight"
+    t.string   "pulse"
+    t.string   "respiration"
+    t.string   "blood_pressure"
+    t.text     "notes"
+    t.integer  "patient_id"
+    t.integer  "doctor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

@@ -26,13 +26,13 @@ var valueline = d3.svg.line()
 var title = "Simple plot with links";
 
 // Define 'div' for tooltips
-var div = d3.select("div")
+var div = d3.select("#chart")
     .append("div")  // declare the tooltip div 
     .attr("class", "tooltip")
     .style("opacity", 0);
 
 // Adds the svg canvas
-var svg = d3.select("div")
+var svg = d3.select("#chart")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)

@@ -1,16 +1,15 @@
 %ul.nav.nav-sidebar
   %li.active= link_to 'General', root_path
-  %li= link_to 'Allergies', root_path
-  %li= link_to 'Current Medications', root_path
-  %li= link_to 'Reason for Visit'
-  %li= link_to 'Flowcharts', flowchart_path
+  %li
+    = link_to 'Flowcharts', flowchart_path
+    %ul
+      %li= link_to 'Anticoagulation Chart', flowchart_path
+      %li= link_to 'Asthma Chart', flowchart_path
+      %li= link_to 'Diabetes Chart', flowchart_path
+      %li= link_to 'Health Maintenance', flowchart_path
+      %li= link_to 'Vitals Check', flowchart_path
   %li= link_to 'Medical History'
-  %li= link_to 'Surgical History'
-  %li= link_to 'Immunization'
-  %li= link_to 'Examination'
-  %li= link_to 'Procedures'
-  %li= link_to 'Diagnostics'
-  %li= link_to 'Prescription'
-  %li= link_to 'Assessment/Plan'
-  %li= link_to 'Diagnostic/Lab'
-  %li= link_to 'Careplan'
+  %li= link_to 'Visit History'
+  %li= link_to 'Medications'
+  %li= link_to 'Treatment Plan'
+  %li= link_to 'Test Results'

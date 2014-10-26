@@ -1,10 +1,29 @@
-%h1.page-header Patients
+%h1.page-header
+  Patient Record for 
+  = @patient.name
+
+%h5 
+  Gender: 
+  = @patient.gender
+%h5 
+  Age: 
+  = @patient.age
+%h5
+  Height:
+  = @patient.height
+%h5
+  Weight:
+  = @patient.weight
+%h5
+  Notices:
+  * Due for Flu Vaccine
+
+
+%h1 Current Medical Conditions
 %table.table.table-striped
   %thead
     %tr
-      %th Name
-    
-    -@patients.each do |patient|
-      %tr
-        %td 
-          =patient.name
+      %th Condition
+      %th Doctor
+    %tr
+   

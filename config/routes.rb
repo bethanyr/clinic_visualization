@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   get 'flowchart', to: 'flowcharts#index'
   get '/flowchart/data', to: 'flowcharts#data'
+  get '/flowchart/diabetes', to: 'flowcharts#diabetes'
 end

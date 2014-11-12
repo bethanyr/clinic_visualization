@@ -1,0 +1,18 @@
+%h2 Medications
+%table.table.table-striped
+  %thead
+    %tr
+      %th Date
+      %th Doctor
+      %th Medication
+      %th Notes
+    -@medications.each do |medication|
+      %tr
+        %td
+          = medication.start_date
+        %td
+
+        %td
+          
+        %td
+%button Drug Interaction

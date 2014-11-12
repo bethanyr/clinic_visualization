@@ -1,0 +1,2 @@
+class Immunization < MedicalRecord
+end

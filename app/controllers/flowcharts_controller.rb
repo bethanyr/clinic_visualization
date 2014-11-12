@@ -24,6 +24,7 @@ class FlowchartsController < ApplicationController
   end
 
   def diabetes
+    @medical_records = MedicalRecord.where(medical_condition_id: 1).order("start_date", "type", "name")
     respond_to do |format|
       format.json do
         render json: [ {  date: "1-Jun-14",

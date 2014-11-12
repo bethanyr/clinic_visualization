@@ -19,11 +19,30 @@
   * Due for Flu Vaccine
 
 
-%h1 Current Medical Conditions
+%h2 Current Medical Conditions
 %table.table.table-striped
   %thead
     %tr
       %th Condition
       %th Doctor
+    -@patient.medical_conditions.each do |condition|
+      %tr
+        %td
+          = condition.name
+        %td
+          = condition.doctor.name
+
+= render 'medical_histories/medical_history'
+
+%h2 Social History
+%table.table.table-striped
+  %thead
     %tr
-   
+      %th Condition
+      %th Doctor
+    -@patient.medical_conditions.each do |condition|
+      %tr
+        %td
+          = condition.name
+        %td
+          = condition.doctor.name

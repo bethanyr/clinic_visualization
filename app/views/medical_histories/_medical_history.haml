@@ -1,0 +1,17 @@
+%h2 Medical History
+%table.table.table-striped
+  %thead
+    %tr
+      %th Start Date
+      %th End Date
+      %th Name
+      %th Notes
+    -@medical_histories.each do |history|
+      %tr
+        %td
+          = history.start_date
+        %td
+          = history.end_date
+        %td
+          = history.name
+        %td

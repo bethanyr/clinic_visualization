@@ -1,0 +1,3 @@
+---
+:import_directory: db/seed_data/
+:export_directory: db/seed_data/

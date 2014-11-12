@@ -42,6 +42,8 @@ gem 'activeadmin', github: 'activeadmin'
 
 gem 'angularjs-rails'
 
+gem 'timecapsule'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,0 +1,18 @@
+%h1 Diabetes Details
+%table.table.table-striped
+  %thead
+    %tr
+      %th Date
+      %th Type
+      %th Name
+      %th Result
+    -@medical_records.each do |record_column|
+      %tr
+        %td 
+          =record.start_date
+        %td
+          =record.type
+        %td
+          =record.name
+        %td
+          =record.result

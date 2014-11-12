@@ -1,0 +1,2 @@
+class LabTest < MedicalRecord
+end

@@ -1,0 +1,2 @@
+class Medication < MedicalRecord
+end

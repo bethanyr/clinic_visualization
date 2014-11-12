@@ -1,0 +1,2 @@
+active,created_at,doctor_id,end_date,id,name,patient_id,start_date,updated_at,visit_id
+true,2014-11-10 19:00:21 UTC,1,,1,diabetes,1,2010-01-01,2014-11-10 19:05:59 UTC,1

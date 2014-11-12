@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141111213216) do
+ActiveRecord::Schema.define(version: 20141112172245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20141111213216) do
     t.string   "treatment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patient_id"
   end
 
   create_table "doctors", force: true do |t|
@@ -45,6 +46,13 @@ ActiveRecord::Schema.define(version: 20141111213216) do
     t.string   "specialty"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "organization"
+    t.string   "phone"
+    t.string   "street_address"
+    t.string   "state"
+    t.string   "postal_code"
+    t.string   "country"
+    t.string   "city"
   end
 
   create_table "immunizations", force: true do |t|
@@ -65,6 +73,7 @@ ActiveRecord::Schema.define(version: 20141111213216) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "patient_id"
+    t.text     "notes"
   end
 
   create_table "medical_records", force: true do |t|
@@ -80,6 +89,14 @@ ActiveRecord::Schema.define(version: 20141111213216) do
     t.integer  "medical_condition_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "units"
+    t.string   "loinc"
+    t.string   "long_name"
+    t.string   "ndc"
+    t.string   "medicine_type"
+    t.decimal  "quantity"
+    t.decimal  "refills"
+    t.text     "notes"
   end
 
   create_table "patients", force: true do |t|

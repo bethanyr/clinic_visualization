@@ -32,17 +32,33 @@
         %td
           = condition.doctor.name
 
+%h2 Current Allergies
+%table.table.table-striped
+  %thead
+    %tr
+      %th Allergy
+      %th Symptoms
+    -@patient.allergies.each do |allergy|
+      %tr
+        %td
+          = allergy.name
+        %td
+          = allergy.symptoms
+
 = render 'medical_histories/medical_history'
 
 %h2 Social History
 %table.table.table-striped
   %thead
     %tr
-      %th Condition
-      %th Doctor
-    -@patient.medical_conditions.each do |condition|
+      %th Name
+      %th Start Date
+      %th End Date
+    -@patient.social_histories.each do |history|
       %tr
         %td
-          = condition.name
+          = history.name
         %td
-          = condition.doctor.name
+          = history.start_date
+        %td
+          = history.end_date

@@ -2,6 +2,21 @@
 %table.table.table-striped
   %thead
     %tr
+      %th
+      -@dates.each do |d|
+        
+        %th 
+          = d
+      -@medical_records.each do |r|
+        %tr
+          %td 
+            = r.name
+        
+
+%h1 Diabetes Details
+%table.table.table-striped
+  %thead
+    %tr
       %th Date
       %th Type
       %th Name

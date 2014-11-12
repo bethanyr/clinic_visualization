@@ -3,16 +3,23 @@ class Patient < ActiveRecord::Base
   has_many :doctors, through: :visits
   has_many :medical_conditions
   has_many :allergies
+  has_many :social_histories
 
   def age
-    32
+    today = Time.now
+    today.year - birth_date.year
+  end
+
+  def current_allergies
+    self.allergies
   end
 
   def height
-    "5 ft 7 inches"
+    visit = Visit.where(patient_id: id).last
+    visit.height
   end
-
   def weight
-    "150 lbs"
+    visit = Visit.where(patient_id: id).last
+    visit.height
   end
 end

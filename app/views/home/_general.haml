@@ -45,7 +45,23 @@
         %td
           = allergy.symptoms
 
-= render 'medical_histories/medical_history'
+%h2 Lab Tests
+%table.table.table-striped
+  %thead
+    %tr
+      %th Date
+      %th Name
+      %th Result
+    -@lab_tests.each do |test|
+      %tr
+        %td
+          = test.start_date
+        %td
+          = test.name
+        %td
+          = test.result
+
+= render 'visits/visit'
 
 %h2 Social History
 %table.table.table-striped

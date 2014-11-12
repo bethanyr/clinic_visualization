@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Timecapsule.import_model Patient
+Timecapsule.import_model Doctor
+Timecapsule.import_model MedicalCondition
+Timecapsule.import_model MedicalRecord
+Timecapsule.import_model Visit
+

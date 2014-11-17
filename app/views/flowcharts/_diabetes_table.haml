@@ -3,31 +3,14 @@
   %thead
     %tr
       %th
-      -@dates.each do |d|
+      -@g.column_headers.each do |d|
         
         %th 
           = d
-      -@medical_records.each do |r|
+      -@g.rows.each do |r|
         %tr
           %td 
-            = r.name
-        
-
-%h1 Diabetes Details
-%table.table.table-striped
-  %thead
-    %tr
-      %th Date
-      %th Type
-      %th Name
-      %th Result
-    -@medical_records.each do |record|
-      %tr
-        %td 
-          =record.start_date
-        %td
-          =record.type
-        %td
-          =record.name
-        %td
-          =record.result
+            = r.header
+          -r.data.each do |d|
+            %td
+              = d.result

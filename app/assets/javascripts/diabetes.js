@@ -40,10 +40,8 @@ var div = d3.select("#chart2")
 //different json files
 d3.json("diabetes.json", function(error, data) {
   color.domain(d3.keys(data[0]).filter(function(key) { if ( key !== "date" && key !== "link") {return true;} else {return false;} }));
-
   data.forEach(function(d) {
     d.date = parseDate(d.date);
-    console.log(d.data);
   });
 
     data.forEach(function(d) {

@@ -4,6 +4,7 @@ class Patient < ActiveRecord::Base
   has_many :medical_conditions
   has_many :allergies
   has_many :social_histories
+  has_many :notes
 
   def age
     today = Time.now
@@ -20,6 +21,11 @@ class Patient < ActiveRecord::Base
   end
   def weight
     visit = Visit.where(patient_id: id).last
-    visit.height
+    visit.weight
+  end
+
+  def bmi
+    visit = Visit.where(patient_id: id).last
+    visit.bmi
   end
 end

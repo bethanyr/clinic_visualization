@@ -1,0 +1,16 @@
+%h1 Kidney Function Details
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+      -@g.column_headers.each do |d|
+        
+        %th 
+          = d
+      -@g.rows.each do |r|
+        %tr
+          %td 
+            = r.header
+          -r.data.each do |d|
+            %td
+              = d.result if d

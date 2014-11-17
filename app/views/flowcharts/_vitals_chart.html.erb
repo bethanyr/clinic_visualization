@@ -1,19 +1,18 @@
 <style>
-
-    path { 
-        stroke: steelblue;
-        stroke-width: 2;
-        fill: none;
-    }
-
-    .axis path,
-    .axis line {
-        fill: none;
-        stroke: grey;
-        stroke-width: 1;
-        shape-rendering: crispEdges;
-    }
-
+body {
+  font: 10px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
     div.info {
         position: absolute;    
         text-align: center;    
@@ -26,9 +25,8 @@
         border-radius: 8px;
       /*  pointer-events: none;    This line needs to be removed */       
     }
-
 </style>
-<h1 class= "page-header"> Sample Chart </h1>
-<div id="chart">
-<%= javascript_include_tag 'line' %>
+<h1 class= "page-header"> Vitals Chart </h1>
+<div id="chart3">
+<%= javascript_include_tag 'vitals' %>
 </div>

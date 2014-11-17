@@ -1,0 +1,53 @@
+%h1 Visit Summary
+%b Age:
+=@patient.age
+
+%b Current Visit: 
+= @visit.visit_date
+%b Reason: 
+= @visit.chief_complaint
+%p Based on your visit today with 
+= @visit.doctor.name
+, the following was recommended.
+%li Schedule a follow up appointment in 3 months
+%li Increase your Metformin 500 mg to thrice a day
+%li Your A1C goal is to be less than 7.0
+%p
+%p Please sign up for our Patient Portal that’ll let you send / receive messages to us. You can also schedule appointments, see lab results, medications, shot records and other pertinent information.
+%p
+%b Discontinued medications: 
+Nasonex 20 mg, Januvia 50 mg, Onglyza 20 mg
+%p 
+%b New Prescriptions: 
+None
+%p
+%b All medications: 
+Metformin 500 mg, Lipitor 20 mg, Dopamin HCL
+%p
+%b Updated Allergies: 
+None
+%p
+%b Problems assisted at this visit: 
+No new problems.
+
+%p
+%b Vital Signs:
+%li Height: 
+=@visit.height
+%li Height: 
+%li Weight: 
+=@visit.weight
+%li Normal BMI: 18.5-25
+
+%li Initial BP: 110/76
+%li Pulse: 78 bpm
+%li Temperature: 98.6 F
+
+%h3 Preventive Screening:
+%li Flu Shot (last 01/25/2014) due: Fall 2015
+%li Pneumonia vaccine (last: 10/5/2012) due: n/a
+%li Tetanus shot (last: 5/12/2012) due: 5/12/2022
+%li Mammogram (last: 8/10/2013) due: 8/10/2014
+%li Colonoscopy due: 10/01/2018
+%li Pap Smear due: 10/01/2014
+%li Bone Density due: Fall 2014

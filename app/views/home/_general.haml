@@ -41,12 +41,19 @@
     %tr
       %th Allergy
       %th Symptoms
-    -@patient.allergies.each do |allergy|
+    -if @patient.allergies.size > 0 
+      -@patient.allergies.each do |allergy|
+        %tr
+          %td
+            = allergy.name
+          %td
+            = allergy.symptoms
+    -else
       %tr
-        %td
-          = allergy.name
-        %td
-          = allergy.symptoms
+        %td None
+            
+        %td None
+           
 
 %h2 Lab Tests
 %table.table.table-striped

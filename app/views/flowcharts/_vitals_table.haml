@@ -1,0 +1,42 @@
+%h1 Vitals Details
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+      -@vitals.each do |v|
+        
+        %th 
+          = v.visit_date
+    %tr
+      %td Height
+      -@vitals.each do |v|
+        %td
+          = v.height
+
+    %tr
+      %td Weight
+      -@vitals.each do |v|
+        %td
+          = v.weight
+
+    %tr
+      %td BMI
+      -@vitals.each do |v|
+        %td
+          = number_with_precision(v.bmi, precision: 2)
+
+    %tr
+      %td Pulse
+      -@vitals.each do |v|
+        %td
+          = v.pulse
+    %tr
+      %td Excercise
+    %tr
+      %td Smoker
+    %tr
+      %td Alcoholism
+    
+    
+
+          

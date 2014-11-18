@@ -11,6 +11,6 @@
         %tr
           %td 
             = r.header
-          -r.data.each do |d|
+          -r.data.each do |dd|
             %td
-              = d.result
+              = dd.result if dd

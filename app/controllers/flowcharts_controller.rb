@@ -24,10 +24,11 @@ class FlowchartsController < ApplicationController
   end
 
   def diabetes
-    @medical_records = MedicalRecord.where(medical_condition_id: 1).order("start_date", "type", "name")
+    @medical_records = MedicalRecord.where(medical_condition_id: 1).where.not(type: 'Exam').order("start_date", "type", "name")
+    @medical_records_all = MedicalRecord.where(medical_condition_id: 1).order("start_date", "type", "name")
     @dates = ['2014-06-01', '2014-07-01', '2014-08-01', '2014-09-01', '2014-10-01', '2014-11-01', '2014-12-01']
     @g = PivotTable::Grid.new do |g|
-      g.source_data  = @medical_records
+      g.source_data  = @medical_records_all
       g.column_name  = :start_date
       g.row_name     = :name
       g.value_name   = :value
@@ -46,7 +47,7 @@ class FlowchartsController < ApplicationController
   end
 
   def vitals
-    @vitals = Visit.select("visit_date, height, weight, bp1, bp2, pulse").order("visit_date")
+    @vitals = Visit.select("visit_date, height, weight, bp1, bp2, pulse").where(visit_date: '2014-06-01'..'2014-12-01').order("visit_date")
     respond_to do |format|
       format.json do
         render json: build_vitals
@@ -58,7 +59,7 @@ class FlowchartsController < ApplicationController
   end
 
   def kidney
-    @medical_records = MedicalRecord.where(medical_condition_id: 2).order("start_date", "type", "name")
+    @medical_records = MedicalRecord.where(medical_condition_id: 2).where(start_date: '2014-06-01'..'2014-12-01').where.not(type: 'Exam').order("start_date", "type", "name")
     @dates = ['2014-06-01', '2014-07-01', '2014-08-01', '2014-09-01', '2014-10-01', '2014-11-01', '2014-12-01']
     @g = PivotTable::Grid.new do |g|
       g.source_data  = @medical_records

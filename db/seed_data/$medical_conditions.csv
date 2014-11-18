@@ -1,1 +1,1 @@
-active,doctor_id,end_date,id,name,patient_id,start_date,visit_idTRUE,1,,1,Diabetes Mellitus,1,2010-01-10,1TRUE,1,,2,Essential Hyptertension,1,,1FALSE,1,,3,Simple chronic bronchitis,1,,1TRUE,1,,4,Coronary artery disease,1,,1
+active,doctor_id,end_date,id,name,patient_id,start_date,visit_idTRUE,3,,1,Diabetes Mellitus,1,2010-01-10,1TRUE,5,,2,Essential Hyptertension,1,,1FALSE,4,,3,Simple chronic bronchitis,1,,1TRUE,5,,4,Coronary artery disease,1,,1

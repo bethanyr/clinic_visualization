@@ -1,0 +1,8 @@
+doctor_id,dosage,end_date,medicine_id,patient_id,remarks,start_date,visit_id,medical_condition_id
+1,500 mg Twice / daily,,2,1,,2014-06-01,1,1
+1,20 mg Once / daily,,1,1,,2014-06-01,1,1
+1,Once / daily,,4,1,,2014-06-01,1,1
+1,Twice / daily,2014-08-31,6,1,No allergies currently,2014-06-01,1,1
+1,Once / daily,2014-08-31,7,1,A1C didn't improve for this patient and so stopped.,2014-06-2014,1
+1,Once/daily,2014-10-31,8,1,A1C didn't improve for this patient and so stopped.,2014-09-01,1
+1,Once / Daily,,9,1,For control of asthma attacks,2014-08-01,1,1

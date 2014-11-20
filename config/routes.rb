@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :patients
   resources :notes
 
+
   get 'flowchart', to: 'flowcharts#index'
   get '/flowchart/data', to: 'flowcharts#data'
   get '/flowchart/diabetes', to: 'flowcharts#diabetes'
@@ -20,4 +21,5 @@ Rails.application.routes.draw do
   get 'medical_history', to: 'medical_histories#index'
   get 'medication', to: 'medications#index'
   get 'instructions', to: 'patient_instructions#index'
+  get 'interaction', to: 'interactions#index'
 end

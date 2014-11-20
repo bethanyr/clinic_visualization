@@ -1,5 +1,5 @@
 %h2 Medications
-%h3 Current Medications
+%h3 Current Medication
 %table.table.table-striped
   %thead
     %tr
@@ -8,6 +8,7 @@
       %th Medication
       %th Medical Condition
       %th Dosage
+      %th Drug Interactions
     -@medications.each do |medication|
       %tr
         %td
@@ -15,10 +16,36 @@
         %td
           = medication.medical_condition.try(:doctor).try(:name)
         %td
-          = medication.name
+          = medication.medicine.name
         %td
           = medication.medical_condition.try(:name)
         %td
-          = medication.result
+          = medication.dosage
         %td
+          = link_to 'View',interaction_path(medicine_id: medication.medicine_id)
 %button Drug Interaction
+
+%h3 Past Medication History
+%table.table.table-striped
+  %thead
+    %tr
+      %th Start Date
+      %th Doctor
+      %th Medication
+      %th Medical Condition
+      %th Dosage
+      %th Drug Interactions
+    -@past_medications.each do |past|
+      %tr
+        %td
+          = past.start_date
+        %td
+          = past.medical_condition.try(:doctor).try(:name)
+        %td
+          = past.medicine.name
+        %td
+          = past.medical_condition.try(:name)
+        %td
+          = past.dosage
+        %td
+          = link_to 'View',interaction_path(medicine_id: past.medicine_id)

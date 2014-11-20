@@ -1,7 +1,8 @@
 class MedicationsController < ApplicationController
   
   def index
-    @medications = Medication.where(patient_id: 1).where(start_date: '2014-12-01')
+    @medications = Prescription.where(patient_id: 1).where(end_date: nil)
+    @past_medications = Prescription.where(patient_id: 1).where.not(end_date: nil)
   end
 
 

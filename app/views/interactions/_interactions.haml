@@ -1,0 +1,13 @@
+%h2 Interactions
+%table.table.table-striped
+  %thead
+    %tr
+      %th Drug
+      %th Symptoms
+    -@interactions.each do |interaction|
+      %tr
+        %td
+          = link_to interaction.interaction, interaction.link,:target => "_blank"
+        %td
+          = interaction.symptoms
+        

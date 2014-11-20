@@ -6,6 +6,7 @@ class Patient < ActiveRecord::Base
   has_many :allergies
   has_many :social_histories
   has_many :notes, as: :noteable
+  has_many :prescriptions
 
   def age
     today = Time.now

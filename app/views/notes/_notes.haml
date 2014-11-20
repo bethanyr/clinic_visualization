@@ -1,3 +1,4 @@
+%div{"ng-controller"=>"InteractionController"}
 %h2 Notes
 %table.table.table-striped
   %thead
@@ -7,9 +8,9 @@
     -@notes.each do |note|
       %tr
         %td
-          = note.visit.visit_date
+          = note.note_date
         %td
           = note.note
 
-%button Add Note
+= link_to "New", new_note_path, {class: 'btn btn-primary'}
         

@@ -10,6 +10,8 @@ Timecapsule.import_model Doctor
 Timecapsule.import_model MedicalCondition
 Timecapsule.import_model MedicalRecord
 Timecapsule.import_model Visit
+Timecapsule.import_model Medicine
+Timecapsule.import_model Interaction
 User.create(email: "bethany.rentz@hotmail.com", password: "12345678", admin: true)
 User.create(email: "henry.seven@goodhealthclinic.com", password: "12345678", admin: false)
 User.create(email: "admin@test.com", password: "12345678", admin: true)

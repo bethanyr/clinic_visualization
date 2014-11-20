@@ -1,5 +1,10 @@
-%h1 Add a Note
+= stylesheet_link_tag    'home', media: 'all'
+= render 'shared/top_navigation'
+.container-fluid
+  .row
+    .col-sm-3.col-md-2.sidebar
+      = render 'shared/side_navigation'
 
-%input Note
-
-%button Save
+    .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+      = render 'new_note'
+      

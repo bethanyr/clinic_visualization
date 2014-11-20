@@ -1,18 +1,24 @@
 %h2 Medications
+%h3 Current Medications
 %table.table.table-striped
   %thead
     %tr
-      %th Date
+      %th Start Date
       %th Doctor
       %th Medication
-      %th Notes
+      %th Medical Condition
+      %th Dosage
     -@medications.each do |medication|
       %tr
         %td
           = medication.start_date
         %td
-
+          = medication.medical_condition.try(:doctor).try(:name)
         %td
-          
+          = medication.name
+        %td
+          = medication.medical_condition.try(:name)
+        %td
+          = medication.result
         %td
 %button Drug Interaction

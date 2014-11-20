@@ -15,4 +15,6 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require d3
-
+//= require angular
+//= require angular-route
+//= require angular-resource

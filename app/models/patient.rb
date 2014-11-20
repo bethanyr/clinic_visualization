@@ -2,9 +2,10 @@ class Patient < ActiveRecord::Base
   has_many :visits
   has_many :doctors, through: :visits
   has_many :medical_conditions
+  has_many :medications
   has_many :allergies
   has_many :social_histories
-  has_many :notes
+  has_many :notes, as: :noteable
 
   def age
     today = Time.now

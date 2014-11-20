@@ -1,0 +1,7 @@
+interaction,link,medicine_id,symptoms,type
+Cimetidine,http://www.drugbank.ca/drugs/DB00501,2,Cimetidine may increase the therapeutic and adverse effects of metformin by increasing its serum concentration. Consider alternate therapy.,DrugInteraction
+Glucosamine,http://www.drugbank.ca/drugs/DB01296,2,Possible hyperglycemia,DrugInteraction
+Somatropin recombinant,http://www.drugbank.ca/drugs/DB00052,2,Somatropin may antagonize the hypoglycemic effect of metformin. Monitor for changes in fasting and postprandial blood sugars.
+,,2,<li>Avoid alcohol.</li><li>Take with food to reduce gastric irritation.</li>,FoodInteraction
+
+

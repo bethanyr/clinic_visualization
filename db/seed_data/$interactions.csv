@@ -3,5 +3,68 @@ Cimetidine,http://www.drugbank.ca/drugs/DB00501,2,Cimetidine may increase the th
 Glucosamine,http://www.drugbank.ca/drugs/DB01296,2,Possible hyperglycemia,DrugInteraction
 Somatropin recombinant,http://www.drugbank.ca/drugs/DB00052,2,Somatropin may antagonize the hypoglycemic effect of metformin. Monitor for changes in fasting and postprandial blood sugars.
 ,,2,<li>Avoid alcohol.</li><li>Take with food to reduce gastric irritation.</li>,FoodInteraction
-
-
+Alvimopan,http://www.drugbank.ca/drugs/DB06274,1,Decreases levels by P-glycoprotein (MDR-1) efflux transporter. Can significantly increase systemic exposure to P-glycoprotein substrates.
+,DrugInteraction
+Amprenavir,http://www.drugbank.ca/drugs/DB00701,1,Amprenavir may increase the serum concentration of atorvastatin by decreasing its metabolism. Concomitant therapy is contraindicated.,DrugInteraction
+Atazanavir,http://www.drugbank.ca/drugs/DB01072,1Atazanavir may increase the serum concentration of atorvastatin by decreasing its metabolism. Concomitant therapy is contraindicated.,DrugInteraction
+Bezafibrate,http://www.drugbank.ca/drugs/DB01393,1,Increased risk of myopathy/rhabdomyolysis,DrugInteraction
+Boceprevir,http://www.drugbank.ca/drugs/DB08873,1,Boceprevir increases the exposure of atorvastatin. Concomitant therapy should be closely monitored.,DrugInteraction
+Bosentan,http://www.drugbank.ca/drugs/DB00559,1,Bosentan may decrease the serum concentration of atorvastatin by increasing its metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if bosentan is initiated or discontinued or dose changed.,DrugInteraction
+Carbamazepine,http://www.drugbank.ca/drugs/DB00564,1,Carbamazepine - a p-glycoprotein inducer and strong CYP3A4 inducer. It may decrease the effect of atorvastatin by increasing its efflux and metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if carbamazepine is initiated or discontinued or dose changed.,DrugInteraction
+Clarithromycin,http://www.drugbank.ca/drugs/DB01211,1,The macrolide clarithromycin may increase the toxicity of the statin atorvastatin.,DrugInteraction
+Colchicine,http://www.drugbank.ca/drugs/DB01394,1,Increased risk of rhadbomyolysis with this combination.
+Cyclosporine,http://www.drugbank.ca/drugs/DB00091,1,Possible myopathy and rhabdomyolysis,DrugInteraction
+Delavirdine,http://www.drugbank.ca/drugs/DB00705,1,Delavirdine - a strong CYP3A4 inhibitor - may increase the serum concentration of atorvastatin by decreasing its metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if delavirdine is initiated or discontinued or dose changed.,DrugInteraction
+Diltiazem,http://www.drugbank.ca/drugs/DB00343,1,Diltiazem may increase the serum concentration of atorvastatin. Atorvastatin may increase the serum concentration of diltiazem. Monitor for changes in the therapeutic and adverse effects of both agents if concomitant therapy is initiated or discontinued or if doses are changed.,DrugInteraction
+Dronedarone,http://www.drugbank.ca/drugs/DB04855,1,Dronedarone is a CYP2D6 inhibitor thus increasing serum concentrations of atorvastatin. Lower doses of atorvastatin or consider rosuvastatin as cholesterol lowering therapy as there is no significant interaction between rosuvastatin and dronedarone.,DrugInteraction
+Efavirenz,http://www.drugbank.ca/drugs/DB00625,1,Efavirenz may decrease the serum concentration of atorvastatin by increasing its metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if efavirenz is initiated or discontinued or dose changed.,DrugInteraction
+Eltrombopag,http://www.drugbank.ca/drugs/DB06210,1,Eltrombopag increases levels of Atorvastatin via metabolism decrease.,DrugInteraction
+Erythromycin,http://www.drugbank.ca/drugs/DB00199,1,The macrolide erythromycin may increase the toxicity of the statin atorvastatin.,DrugInteraction
+Etravirine,http://www.drugbank.ca/drugs/DB06414,1,Atorvastatin when administered concomitantly with etravirine (a strong CYP3A4 inducer) may experience a decrease in serum concentration. It is recommended to monitor continued efficacy of atorvastatin therapy.,DrugInteraction,http://www.drugbank.ca/drugs/DB01039,1,Fenofibrate
+Increased risk of myopathy/rhabdomyolysis,DrugInteraction
+Fluconazole,http://www.drugbank.ca/drugs/DB00196,1,Increased risk of myopathy/rhabdomyolysis,DrugInteraction
+Fosamprenavir,http://www.drugbank.ca/drugs/DB01319,1,Fosamprenavir - a strong CYP3A4 inhibitor - may increase the serum concentration of atorvastatin by decreasing its metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if fosamprenavir is initiated or discontinued or dose changed.,DrugInteraction
+Fusidic Acid,http://www.drugbank.ca/drugs/DB02703,1,Increased risk of myopathy/rhabdomyolysis,DrugInteraction
+Gemfibrozil,http://www.drugbank.ca/drugs/DB01241,1,Increased risk of myopathy/rhabdomyolysis,DrugInteraction
+Imatinib,http://www.drugbank.ca/drugs/DB00619,1,Imatinib - a strong CYP3A4 inhibitor- may increase the effect and toxicity of atorvastatin by decreasing its metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if imatinib is initiated or discontinued or dose changed.,DrugInteraction
+Indinavir,http://www.drugbank.ca/drugs/DB00224,1,Indinavir - a strong CYP3A4 inhibitor - may increase the serum concentration of atorvastatin by decreasing its metabolism. Concomitant therapy is contraindicated.,DrugInteraction
+Itraconazole,http://www.drugbank.ca/drugs/DB01167,1,Increased risk of myopathy/rhabdomyolysis,DrugInteraction
+Josamycin,http://www.drugbank.ca/drugs/DB01321,1,The macrolide josamycin may increase the toxicity of the statin atorvastatin.,DrugInteraction
+Ketoconazole,http://www.drugbank.ca/drugs/DB01026,1,Increased risk of myopathy/rhabdomyolysis,DrugInteraction
+Liraglutide,http://www.drugbank.ca/drugs/DB06655,1,These agents may have decreased C max and a delayed T max during coadministration.,DrugInteraction
+Lomitapide,http://www.drugbank.ca/drugs/DB08827,1,Atorvastatin and other weak CYP3A4 inhibitors increase lomitapide levels by 2-fold. Thus lomipatide should be dosed at a maximum of 30mg daily when used concomitantly with weak inhibitors of CYP3A4.,DrugInteraction
+Nefazodone,http://www.drugbank.ca/drugs/DB01149,1,Nefazodone - a strong CYP3A4 inhibitor - may increase the serum concentration of atorvastatin by decreasing its metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if nefazodone is initiated or discontinued or dose changed.,DrugInteraction
+Nelfinavir,http://www.drugbank.ca/drugs/DB00220,1,Nelfinavir - a strong CYP3A4 inhibitor - may increase the serum concentration of atorvastatin by decreasing its metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if nelfinavir is initiated or discontinued or dose changed.,DrugInteraction
+Nevirapine,http://www.drugbank.ca/drugs/DB00238,1,Nevirapine - a strong CYP3A4 inducer - may decrease the serum concentration of atorvastatin by increasing its metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if nevirapine is initiated or discontinued or dose changed.,DrugInteraction
+Quinupristin,http://www.drugbank.ca/drugs/DB01369,1,This combination presents an increased risk of toxicity,DrugInteraction
+Rifabutin,http://www.drugbank.ca/drugs/DB00615,1,Rifabutin may decrease the effect of atorvastatin by increasing its metabolism. Consider alternate therapy or monitor for changes in the therapeutic and adverse effects of atorvastatin if rifabutin is initiated or discontinued or dose changed.,DrugInteraction
+Rifampicin,http://www.drugbank.ca/drugs/DB01045,1,Rifampin may decrease the effect of atorvastatin by increasing its metabolism. Consider alternate therapy or monitor for changes in the therapeutic and adverse effects of atorvastatin if rifampin is initiated or discontinued or dose changed.,DrugInteraction
+Ritonavir,http://www.drugbank.ca/drugs/DB00503,1,Ritonavir may increase the serum concentration of atorvastatin by decreasing its metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if ritonavir is initiated or discontinued or dose changed.,DrugInteraction
+Saquinavir,http://www.drugbank.ca/drugs/DB01232,1,Saquinavir may increase the serum concentration of atorvastatin by decreasing its metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if saquinavir is initiated or discontinued or dose changed.,DrugInteraction
+Telaprevir,http://www.drugbank.ca/drugs/DB05521,1,Telaprevir increases levels by affecting CYP3A4 metabolism. Concomitant therapy is contraindicated.,DrugInteraction
+Telithromycin,http://www.drugbank.ca/drugs/DB00976,1,The macrolide antibiotic telithromycin may increase the serum concentration of atorvastatin by decreasing its metabolism. Consider alternate therapy or monitor for changes in the therapeutic and adverse effects of atorvastatin if telithromycin is initiated or discontinued or dose changed.,DrugInteraction
+Tipranavir,http://www.drugbank.ca/drugs/DB00932,1,Tipranavir - co-administered with Ritonavir - increases the adverse/toxic effects of Atorvastatin. Concomitant therapy should be avoided.,DrugInteraction
+Topotecan,http://www.drugbank.ca/drugs/DB01030,1,The p-glycoprotein inhibitor Atorvastatin may increase the bioavailability of oral Topotecan. A clinically significant effect is also expected with IV Topotecan. Concomitant therapy should be avoided.,DrugInteraction
+Verapamil,http://www.drugbank.ca/drugs/DB00661,1,Verapamil - a moderate CYP3A4 inhibitor - may increase the serum concentration of Atorvastatin by decreasing its metabolism. Avoid concurrent use if possible or reduce lovastatin dose during concomitant therapy. Monitor for changes in the therapeutic/adverse effects of Atorvastatin if Verapamil is initiated or discontinued or dose changed.,DrugInteraction
+Voriconazole,http://www.drugbank.ca/drugs/DB00582,1,Voriconazole - a strong CYP3A4 inhibitor - may increase the serum concentration of atorvastatin by decreasing its metabolism. Monitor for changes in the therapeutic and adverse effects of atorvastatin if voriconazole is initiated or discontinued or dose changed.,DrugInteraction
+,,1,<li>Avoid alcohol.</li><li>Avoid drastic changes in dietary habit.</li><li>Avoid taking grapefruit or grapefruit juice throughout treatment. Grapefruit can significantly increase serum levels of this product.</li><li>Food may decrease maximum plasma levels and area under the curve but this is clinically inconsequential according to the manufacturer.</li><li>Take with low fat meal.</li>,FoodInteraction
+Amitriptyline,http://www.drugbank.ca/drugs/DB00321,4,The tricyclic antidepressant amitriptyline increases the sympathomimetic effect dopamine.,DrugInteraction
+Amoxapine,http://www.drugbank.ca/drugs/DB00543,4,The tricyclic antidepressant amoxapine increases the sympathomimetic effect of dopamine.,DrugInteraction
+Clomipramine,http://www.drugbank.ca/drugs/DB01242,4,The tricyclic antidepressant clomipramine increases the sympathomimetic effect of dopamine.,DrugInteraction
+Desipramine,http://www.drugbank.ca/drugs/DB01151,4,The tricyclic antidepressant desipramine increases the sympathomimetic effect of dopamine.,DrugInteraction
+Doxepin,http://www.drugbank.ca/drugs/DB01142,4,The tricyclic antidepressant doxepin increases the sympathomimetic effect of dopamine.,DrugInteraction
+Entacapone,http://www.drugbank.ca/drugs/DB00494,4,Entacapone increases the effect and toxicity of the sympathomimetic dopamine.,DrugInteraction
+Fosphenytoin,http://www.drugbank.ca/drugs/DB01320,4,Risk of severe hypotension,DrugInteraction
+Guanethidine,http://www.drugbank.ca/drugs/DB01170,4,Dopamine may decrease the effect of guanethidine.,DrugInteraction
+Imipramine,http://www.drugbank.ca/drugs/DB00458,4,The tricyclic antidepressant imipramine increases the sympathomimetic effect of dopamine.,DrugInteraction
+Isocarboxazid,http://www.drugbank.ca/drugs/DB01247,4,Increased arterial pressure,DrugInteraction
+Linezolid,http://www.drugbank.ca/drugs/DB00601,4,Possible increase of arterial pressure,DrugInteraction
+Lurasidone,http://www.drugbank.ca/drugs/DB08815,4,Dopamine increases toxicity (enhanced hypotensive effects) of lurasidone.,DrugInteraction
+Methyldopa,http://www.drugbank.ca/drugs/DB00968,4,Increased arterial pressure,DrugInteraction
+Midodrine,http://www.drugbank.ca/drugs/DB00211,4,Increased arterial pressure,DrugInteraction
+Moclobemide,http://www.drugbank.ca/drugs/DB01171,4,Moclobemide increases the sympathomimetic effect of dopamine.,DrugInteraction
+Nortriptyline,http://www.drugbank.ca/drugs/DB00540,4,The tricyclic antidepressant nortriptyline increases the sympathomimetic effect of dopamine.,DrugInteraction
+Phenelzine,http://www.drugbank.ca/drugs/DB00780,4,Increased arterial pressure,DrugInteraction
+Phenytoin,http://www.drugbank.ca/drugs/DB00252,4,Risk of severe hypotension,DrugInteraction
+Rasagiline,http://www.drugbank.ca/drugs/DB01367,4,Increased arterial pressure,DrugInteraction
+Reserpine,http://www.drugbank.ca/drugs/DB00206,4,Increased arterial pressure,DrugInteraction

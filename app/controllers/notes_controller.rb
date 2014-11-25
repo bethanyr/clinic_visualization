@@ -1,24 +1,29 @@
 class NotesController < ApplicationController
   
   def index
+    @nav_item = 'notes'
     patient = Patient.find_by(id: 1)
     @notes = patient.notes
   end
 
   def new
+    @nav_item = 'notes'
     patient = Patient.find_by(id: 1)
     @note = patient.notes.new
   end
 
   def edit
+    @nav_item = 'notes'
     @note = Note.find_by(id: params[:id])
   end
 
   def show
+    @nav_item = 'notes'
     @note = Note.find_by(id: params[:id])
   end
 
   def update
+    @nav_item = 'notes'
     @note = Note.find_by(id: params[:id])
     @note.update_attributes note_params if @note
     if @note.save
@@ -29,9 +34,9 @@ class NotesController < ApplicationController
   end
 
   def create
+    @nav_item = 'notes'
     patient = Patient.find_by(id: 1)
     @note = patient.notes.build note_params
-    @note.note_date = Time.now
     if @note.save
       redirect_to notes_path
     else

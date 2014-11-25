@@ -1,13 +1,28 @@
-%ul.nav.nav-sidebar
-  %li.active= link_to 'General Information', root_path
-  %li
-    = link_to 'Specialist Dashboards', dashboard_path
-    %ul
-      %li= link_to 'Diabetes Dashboard', dashboard_diabetes_path
-      %li= link_to 'Kidney Function Dashboard', dashboard_kidney_path
-      %li= link_to 'Vitals Dashboard', dashboard_vitals_path
-      %li= link_to 'Anticoagulation Dashboard', dashboard_anticoagulation_path
-      %li= link_to 'Asthma Dashboard', dashboard_asthma_path     
-  %li= link_to 'Medication Reconciliation', medication_path 
-  %li= link_to 'Patient Instructions Summary', instructions_path
-  %li= link_to 'Notes', notes_path
+%div{"ng-controller"=>"sideNavController", "ng-init"=>"setNavItem('#{@nav_item}')"}
+  %ul.nav.nav-sidebar
+    %li{"ng-class"=>"nav_item === 'general' ? 'active' : ''"}
+      = link_to 'General Information', root_path
+      %ul
+        %li
+          = link_to 'Visit History', root_path
+        %li
+          = link_to 'Lab Test History', root_path
+    %li{"ng-class"=>"nav_item === 'dashboard' ? 'active' : ''"}
+      = link_to 'Specialist Dashboards', dashboard_path
+      %ul
+        %li{"ng-class"=>"nav_item === 'diabetes' ? 'active' : ''"}
+          = link_to 'Diabetes Dashboard', dashboard_diabetes_path
+        %li{"ng-class"=>"nav_item === 'kidney' ? 'active' : ''"}
+          = link_to 'Kidney Function Dashboard', dashboard_kidney_path
+        %li{"ng-class"=>"nav_item === 'vitals' ? 'active' : ''"}
+          = link_to 'Vitals Dashboard', dashboard_vitals_path
+        %li{"ng-class"=>"nav_item === 'anticoagulation' ? 'active' : ''"}
+          = link_to 'Anticoagulation Dashboard', dashboard_anticoagulation_path
+        %li{"ng-class"=>"nav_item === 'bronchitis' ? 'active' : ''"}
+          = link_to 'Bronchitis Dashboard', dashboard_bronchitis_path     
+    %li{"ng-class"=>"nav_item === 'medications' ? 'active' : ''"}
+      = link_to 'Medication Reconciliation', medication_path 
+    %li{"ng-class"=>"nav_item === 'instructions' ? 'active' : ''"}
+      = link_to 'Patient Instructions Summary', instructions_path
+    %li{"ng-class"=>"nav_item === 'notes' ? 'active' : ''"}
+      = link_to 'Notes', notes_path

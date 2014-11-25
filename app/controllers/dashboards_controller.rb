@@ -1,10 +1,11 @@
 class DashboardsController < ApplicationController
   
   def index
- 
+    @nav_item = 'dashboard'
   end
 
   def diabetes
+    @nav_item = 'diabetes'
     @medical_records = MedicalRecord.where(medical_condition_id: 1).where.not(type: 'Exam').order("start_date", "type", "name")
     @medical_records_all = MedicalRecord.where(medical_condition_id: 1).order("start_date", "type", "name")
     @dates = ['2014-06-01', '2014-07-01', '2014-08-01', '2014-09-01', '2014-10-01', '2014-11-01', '2014-12-01']
@@ -28,6 +29,7 @@ class DashboardsController < ApplicationController
   end
 
   def vitals
+    @nav_item = 'vitals'
     @vitals = Visit.select("visit_date, height, weight, bp1, bp2, pulse, exercise, smoking, alcohol_intake").where(visit_date: '2014-06-01'..'2014-12-01').order("visit_date")
     respond_to do |format|
       format.json do
@@ -40,6 +42,7 @@ class DashboardsController < ApplicationController
   end
 
   def kidney
+    @nav_item = 'kidney'
     @medical_records = MedicalRecord.where(medical_condition_id: 2).where(start_date: '2014-06-01'..'2014-12-01').where.not(type: 'Exam').order("start_date", "type", "name")
     @dates = ['2014-06-01', '2014-07-01', '2014-08-01', '2014-09-01', '2014-10-01', '2014-11-01', '2014-12-01']
     @g = PivotTable::Grid.new do |g|
@@ -59,11 +62,13 @@ class DashboardsController < ApplicationController
     end
   end
   
-  def asthma
+  def bronchitis
+    @nav_item = 'bronchitis'
 
   end
 
   def anticoagulation
+    @nav_item = 'anticoagulation'
 
   end
   def build_vitals

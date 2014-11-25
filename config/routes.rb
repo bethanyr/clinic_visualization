@@ -15,11 +15,13 @@ Rails.application.routes.draw do
   get '/dashboard/diabetes', to: 'dashboards#diabetes'
   get '/dashboard/vitals', to: 'dashboards#vitals'
   get '/dashboard/kidney', to: 'dashboards#kidney'
-  get '/dashboard/asthma', to: 'dashboards#asthma'
+  get '/dashboard/bronchitis', to: 'dashboards#bronchitis'
   get '/dashboard/anticoagulation', to: 'dashboards#anticoagulation'
   get 'visit', to: 'visits#index'
   get 'medical_history', to: 'medical_histories#index'
   get 'medication', to: 'medications#index'
   get 'instructions', to: 'patient_instructions#index'
   get 'interaction', to: 'interactions#index'
+
+  get "patients_data", to: "patients#index", defaults: {format: :json}
 end

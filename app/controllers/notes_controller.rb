@@ -10,6 +10,24 @@ class NotesController < ApplicationController
     @note = patient.notes.new
   end
 
+  def edit
+    @note = Note.find_by(id: params[:id])
+  end
+
+  def show
+    @note = Note.find_by(id: params[:id])
+  end
+
+  def update
+    @note = Note.find_by(id: params[:id])
+    @note.update_attributes note_params if @note
+    if @note.save
+      redirect_to notes_path
+    else
+      render :edit
+    end
+  end
+
   def create
     patient = Patient.find_by(id: 1)
     @note = patient.notes.build note_params

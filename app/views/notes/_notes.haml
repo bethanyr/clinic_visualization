@@ -5,12 +5,17 @@
     %tr
       %th Date
       %th Note
+      %th
+      %th
     -@notes.each do |note|
       %tr
         %td
-          = note.note_date
+          = link_to note.note_date, note_path(note.id)
         %td
           = note.note
+        %td
+          =link_to 'Edit', edit_note_path(note.id)
+        %td
 
 = link_to "New", new_note_path, {class: 'btn btn-primary'}
         

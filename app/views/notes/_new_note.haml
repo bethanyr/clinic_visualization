@@ -1,7 +1,6 @@
 %h1 Add a Note
 
 = simple_form_for(@note, html: {class: 'form-vertical' }) do |f|
-
+    = f.input :note_date
     = f.input :note, as: :text,rows: 3
     = f.submit 'Save', :class => 'btn btn-primary'
-    = button_to 'Cancel', notes_path

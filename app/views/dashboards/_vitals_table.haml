@@ -32,10 +32,19 @@
           = v.pulse
     %tr
       %td Excercise
+      -@vitals.each do |v|
+        %td
+          = v.exercise
     %tr
       %td Smoker
+      -@vitals.each do |v|
+        %td
+          = v.smoking
     %tr
-      %td Alcoholism
+      %td Alcoholic Intake
+      -@vitals.each do |v|
+        %td
+          = v.alcohol_intake
     
     
 

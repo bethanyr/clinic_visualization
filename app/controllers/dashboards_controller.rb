@@ -1,26 +1,7 @@
-class FlowchartsController < ApplicationController
+class DashboardsController < ApplicationController
   
   def index
  
-  end
-
-  def data
-
-    respond_to do |format|
-      format.json do
-        render json: [ {  date: "21-Apr-12",
-                        bp: 89,
-                        link: "http://www.google.com" },
-                        {  date: "23-Apr-12",
-                        bp: 99,
-                        link: "http://www.google.com" },
-                        {  date: "25-Apr-12",
-                        bp: 120,
-                        link: "http://www.google.com" }
-                      ]
-      end
-    end
-
   end
 
   def diabetes
@@ -47,7 +28,7 @@ class FlowchartsController < ApplicationController
   end
 
   def vitals
-    @vitals = Visit.select("visit_date, height, weight, bp1, bp2, pulse").where(visit_date: '2014-06-01'..'2014-12-01').order("visit_date")
+    @vitals = Visit.select("visit_date, height, weight, bp1, bp2, pulse, exercise, smoking, alcohol_intake").where(visit_date: '2014-06-01'..'2014-12-01').order("visit_date")
     respond_to do |format|
       format.json do
         render json: build_vitals
@@ -96,7 +77,7 @@ class FlowchartsController < ApplicationController
       vitals_item[:bp1] = v.bp1
       vitals_item[:bp2] = v.bp2
       vitals_item[:pulse] = v.pulse
-      vitals_item[:link] = 'http://google.com'
+      #vitals_item[:link] = 'http://google.com'
       vitals_array << vitals_item
     end
     vitals_array
@@ -116,7 +97,7 @@ class FlowchartsController < ApplicationController
         records.each do |record|
           hash_item[record.name.downcase.tr(' ', '_')] = record.value
         end
-        hash_item[:link] = "http://google.com" if hash_item.size > 0
+        #hash_item[:link] = "http://google.com" if hash_item.size > 0
         array_med << hash_item
       end
     end

@@ -1,4 +1,4 @@
-app.controller "topNavController", ["$scope", "Patient", ($scope, Patient) ->
+app.controller "topNavController", ["$scope", "Patient", "userData", ($scope, Patient, userData) ->
 
   $scope.patients = [] 
   $scope.selected_patient = ''
@@ -10,6 +10,7 @@ app.controller "topNavController", ["$scope", "Patient", ($scope, Patient) ->
   $scope.init()
 
   $scope.changePatient =(new_patient)->
-    console.log(new_patient)
+    console.log(new_patient.id)
+    userData.update(id: $scope.selected_patient.id)
 
 ]

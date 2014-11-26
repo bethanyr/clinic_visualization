@@ -1,0 +1,18 @@
+%h1 Add a Visit
+
+= simple_form_for(@visit, html: {class: 'form-vertical' }) do |f|
+  = f.input :visit_date
+  = f.input :chief_complaint
+  = f.input :diagnosis
+  = f.input :height
+  = f.input :weight
+  = f.input :pulse
+  = f.input :respiration
+  = f.input :blood_pressure
+  = f.input :smoking
+  = f.input :alcohol_intake
+  = f.input :exercise
+  = f.submit 'Save', :class => 'btn btn-primary'
+
+= render 'notes' if action_name == 'edit'
+= render 'notes' if action_name == 'show'

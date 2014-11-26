@@ -8,9 +8,15 @@ Rails.application.routes.draw do
   resources :home
   resources :patients
   resources :notes
+  resources :doctors
+  resources :visits
+  resources :medical_conditions
+  resources :allergies
+  resources :lab_tests
 
 
   get 'dashboard', to: 'dashboards#index'
+  get 'view_dashboard', to: 'dashboards#view_dashboard'
   get '/dashboard/data', to: 'dashboards#data'
   get '/dashboard/diabetes', to: 'dashboards#diabetes'
   get '/dashboard/vitals', to: 'dashboards#vitals'
@@ -24,4 +30,5 @@ Rails.application.routes.draw do
   get 'interaction', to: 'interactions#index'
 
   get "patients_data", to: "patients#index", defaults: {format: :json}
+  post "set_current_patient", to: "user_data#update_user", defaults: {format: :json}
 end

@@ -5,6 +5,7 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+  padding-left: 50px;
 }
 
 
@@ -17,12 +18,23 @@ body {
   border-bottom: 1px solid #eee;
 }
 
+
 /*
  * Top navigation
  * Hide default border to remove 1px line.
  */
 .navbar-fixed-top {
   border: 0;
+}
+
+.navbar-nav > li {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  color: #777777;
+  font-size: 18px;
+  line-height: 20px;
+  height: 50px;
 }
 
 /*

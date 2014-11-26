@@ -7,4 +7,8 @@ class Visit < ActiveRecord::Base
   def bmi
     (weight.to_f/(height.to_f*height.to_f)) * 703
   end
+
+  def last_note
+    #TODO 
+  end
 end

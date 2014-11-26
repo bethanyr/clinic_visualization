@@ -9,5 +9,9 @@ class PatientsController < ApplicationController
     end
   end
 
+  def udpate
+    current_user.patient_id = params[:id]
+    current_user.save
+  end
 
 end

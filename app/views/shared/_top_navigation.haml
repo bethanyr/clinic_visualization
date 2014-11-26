@@ -10,6 +10,8 @@
     .navbar-collapse.collapse
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
+          %li
+            = "Welcome #{current_user.doctor.name}, #{current_user.doctor.specialty}"
           %li 
             Patient
             %select{"ng-model" => "selected_patient", "ng-options" => "patient.name for patient in patients"}

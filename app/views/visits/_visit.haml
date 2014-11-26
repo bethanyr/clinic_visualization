@@ -1,4 +1,4 @@
-%h2 Visit History
+%h3 Visit History
 %table.table.table-striped
   %thead
     %tr
@@ -11,8 +11,8 @@
         %td
           = visit.visit_date
         %td
-          = visit.doctor.name
+          = visit.doctor.try(:name)
         %td
           = visit.chief_complaint
         %td
-          = visit.notes
+          = visit.last_note

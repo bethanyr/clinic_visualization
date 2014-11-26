@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124181355) do
+ActiveRecord::Schema.define(version: 20141126174307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,6 +108,7 @@ ActiveRecord::Schema.define(version: 20141124181355) do
     t.decimal  "refills"
     t.text     "notes"
     t.integer  "medicine_id"
+    t.integer  "doctor_id"
   end
 
   create_table "medicines", force: true do |t|
@@ -164,6 +165,8 @@ ActiveRecord::Schema.define(version: 20141124181355) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin"
+    t.integer  "patient_id"
+    t.integer  "doctor_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

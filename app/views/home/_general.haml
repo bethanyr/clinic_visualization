@@ -1,4 +1,4 @@
-%h1.page-header
+%h1.page-header{"ng-controller" => "homeController"}
   Patient Record for 
   = @patient.name
 
@@ -22,20 +22,24 @@
   * Due for Flu Vaccine
 
 
-%h2 Current Medical Conditions
+%h3 Current Medical Conditions
 %table.table.table-striped
   %thead
     %tr
       %th Condition
       %th Doctor
+      %th View Dashboard
     -@patient.medical_conditions.each do |condition|
       %tr
         %td
           = condition.name
         %td
-          = condition.doctor.name
+          = link_to condition.doctor.name, doctor_path(condition.doctor)
+        %td
+          = link_to 'View Dashboard', "#{condition.name.downcase.gsub(/\s+/, "_")}_path"
+=link_to 'Add Medical Condition', root_path, {class: 'btn btn-primary'}
 
-%h2 Current Allergies
+%h3 Current Allergies
 %table.table.table-striped
   %thead
     %tr
@@ -53,9 +57,10 @@
         %td None
             
         %td None
+=link_to 'Add Allergy', root_path, {class: 'btn btn-primary'}
            
 
-%h2 Lab Tests
+%h3 Lab Tests
 %table.table.table-striped
   %thead
     %tr
@@ -70,12 +75,13 @@
           = test.name
         %td
           = test.result
-=link_to 'View All', root_path, {class: 'btn btn-primary'}
+=link_to 'View All', lab_tests_path, {class: 'btn btn-primary'}
+=link_to 'Add Lab Test', new_lab_test_path, {class: 'btn btn-primary'}
 
 = render 'visits/visit'
-=link_to 'View All', root_path, {class: 'btn btn-primary'}
+=link_to 'View All', visits_path, {class: 'btn btn-primary'}
 
-%h2 Social History
+%h3 Social History
 %table.table.table-striped
   %thead
     %tr

@@ -4,6 +4,11 @@ class DashboardsController < ApplicationController
     @nav_item = 'dashboard'
   end
 
+  def view_dashboard
+    redirect_to '/dashboard/diabetes' if params[:id] == 1
+
+  end
+
   def diabetes
     @nav_item = 'diabetes'
     @medical_records = MedicalRecord.where(medical_condition_id: 1).where.not(type: 'Exam').order("start_date", "type", "name")

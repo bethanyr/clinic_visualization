@@ -1,0 +1,15 @@
+%h3 Lab Tests
+%table.table.table-striped
+  %thead
+    %tr
+      %th Date
+      %th Name
+      %th Result
+    -@lab_tests.each do |test|
+      %tr
+        %td
+          = test.start_date
+        %td
+          = test.name
+        %td
+          = test.result

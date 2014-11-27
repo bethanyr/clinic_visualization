@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get 'medication', to: 'medications#index'
   get 'instructions', to: 'patient_instructions#index'
   get 'interaction', to: 'interactions#index'
+  get 'help', to: 'information#index'
 
   get "patients_data", to: "patients#index", defaults: {format: :json}
   post "set_current_patient", to: "user_data#update_user", defaults: {format: :json}

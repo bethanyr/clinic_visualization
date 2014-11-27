@@ -9,7 +9,7 @@
     -@visits.each do |visit|
       %tr
         %td
-          = visit.visit_date
+          = link_to visit.visit_date, visit_path(visit.id)
         %td
           = visit.doctor.try(:name)
         %td

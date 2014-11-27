@@ -31,7 +31,7 @@ class LabTestsController < ApplicationController
 
   def create
     @lab_test = @patient.lab_tests.build lab_test_params
-    @lab_test.doctor = current_user.doctor
+    @lab_test.doctor_id = current_user.doctor_id
     if @lab_test.save
       redirect_to lab_tests_path
     else

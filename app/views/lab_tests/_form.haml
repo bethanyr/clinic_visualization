@@ -8,5 +8,6 @@
   = f.input :units
   = f.input :description
   = f.input :long_name
-  = f.input :medical_condition_id
+  = f.association :medical_condition, collection: @patient.medical_conditions
   = f.submit 'Save', :class => 'btn btn-primary'
+  = link_to 'Cancel', lab_tests_path, :class => 'btn'

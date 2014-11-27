@@ -5,6 +5,7 @@
       %th Date
       %th Name
       %th Result
+      %th Doctor
     -@lab_tests.each do |test|
       %tr
         %td
@@ -13,3 +14,5 @@
           = test.name
         %td
           = test.result
+        %td
+          = test.doctor.try(:name)

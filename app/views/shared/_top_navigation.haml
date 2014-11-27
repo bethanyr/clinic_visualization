@@ -17,7 +17,7 @@
             %select{"ng-model" => "selected_patient", "ng-options" => "patient.name for patient in patients"}
             %button{'ng-click' => 'changePatient(selected_patient)'} Change Patient
           %li= link_to 'Sign out', destroy_user_session_path, :method=>'delete'
-          %li= link_to 'Help'
+          %li= link_to 'Help', help_path
           - if current_user.admin?
             %li= link_to 'Admin', admin_root_path 
         - else

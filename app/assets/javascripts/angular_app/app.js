@@ -1,4 +1,4 @@
-app = angular.module("CV", ["ngRoute", "ngResource", 'ui.bootstrap'] )
+app = angular.module("CV", ["ngRoute", "ngResource", "ui.bootstrap"] )
 
 app.config([
   "$httpProvider", function(provider) {

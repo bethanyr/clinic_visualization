@@ -4,3 +4,4 @@
     = f.input :note_date
     = f.input :note, as: :text,rows: 3
     = f.submit 'Save', :class => 'btn btn-primary'
+    = link_to 'Cancel', notes_path, { class: 'btn btn-warning' } 

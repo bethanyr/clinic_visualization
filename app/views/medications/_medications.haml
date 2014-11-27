@@ -1,53 +1,64 @@
 %h2{"ng-init"=>"interactions = #{@interactions}"} Medications
-%h3 Current Medication
-%table.table.table-striped
-  %thead
-    %tr
-      %th Start Date
-      %th Doctor
-      %th Medication
-      %th Medical Condition
-      %th Dosage
-      %th Drug Interactions
-    -@medications.each do |medication|
-      %tr
-        %td
-          = medication.start_date
-        %td
-          = medication.medical_condition.try(:doctor).try(:name)
-        %td
-          = medication.medicine.name
-        %td
-          = medication.medical_condition.try(:name)
-        %td
-          = medication.dosage
-        %td
-          = link_to 'View',interaction_path(medicine_id: medication.medicine_id)
-%label Select drug: 
-%select{'ng-model' => 'drug', 'ng-options' => 'interaction.interaction for interaction in interactions', placeholder: 'select drug'} 
-%a{"ng-click" => "viewInteractions(drug)", href: "", class: "btn-primary"}View Interactions
-
-%h3 Previous Medication
-%table.table.table-striped
-  %thead
-    %tr
-      %th Start Date
-      %th Doctor
-      %th Medication
-      %th Medical Condition
-      %th Dosage
-      %th Drug Interactions
-    -@past_medications.each do |past|
-      %tr
-        %td
-          = past.start_date
-        %td
-          = past.medical_condition.try(:doctor).try(:name)
-        %td
-          = past.medicine.name
-        %td
-          = past.medical_condition.try(:name)
-        %td
-          = past.dosage
-        %td
-          = link_to 'View',interaction_path(medicine_id: past.medicine_id)
+%tabset{type: 'pills'}
+  %tab{heading: 'Current Medication'}
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Start Date
+          %th Doctor
+          %th Medication
+          %th Medical Condition
+          %th Dosage
+          %th Drug Interactions
+        -@medications.each do |medication|
+          %tr
+            %td
+              = medication.start_date
+            %td
+              = medication.medical_condition.try(:doctor).try(:name)
+            %td
+              = medication.medicine.name
+            %td
+              = medication.medical_condition.try(:name)
+            %td
+              = medication.dosage
+            %td
+              = link_to 'View',interaction_path(medicine_id: medication.medicine_id)
+    %label Select drug: 
+    %select{'ng-model' => 'drug', 'ng-options' => 'interaction.interaction for interaction in interactions', placeholder: 'select drug'} 
+    %b{'ng-controller'=>'modalInteractionController'}  
+      %script{type: 'text/ng-template', id: "modalDrug.html"}
+        %div.modal-header
+          %h3.modal-title Drug Interaction: {{ drug.interaction }}
+          %div.modal-body
+            {{ drug.symptoms }}
+          %div.modal-footer
+            %button.btn.btn-primary{'ng-click'=>'ok()'} OK
+      %button.btn.btn-default{"ng-click" => "open()"} View Interactions
+  %tab{heading: 'Previous Medication'}
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Start Date
+          %th End Date
+          %th Doctor
+          %th Medication
+          %th Medical Condition
+          %th Dosage
+          %th Drug Interactions
+        -@past_medications.each do |past|
+          %tr
+            %td
+              = past.start_date
+            %td
+              = past.end_date
+            %td
+              = past.medical_condition.try(:doctor).try(:name)
+            %td
+              = past.medicine.name
+            %td
+              = past.medical_condition.try(:name)
+            %td
+              = past.dosage
+            %td
+              = link_to 'View',interaction_path(medicine_id: past.medicine_id)

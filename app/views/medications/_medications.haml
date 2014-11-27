@@ -23,7 +23,7 @@
           = medication.dosage
         %td
           = link_to 'View',interaction_path(medicine_id: medication.medicine_id)
-%select{'ng-model' => 'drug', 'ng-options' => 'interaction.interaction for interaction in interactions'} 
+%select{'ng-model' => 'drug', 'ng-options' => 'interaction.interaction for interaction in interactions', placeholder: 'select drug'} 
 %a{"ng-click" => "viewInteractions(drug)", href: "", class: "btn-primary"}View Interactions
 
 %h3 Past Medication History

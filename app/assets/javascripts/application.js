@@ -18,4 +18,5 @@
 //= require angular
 //= require angular-route
 //= require angular-resource
+//= require ui-bootstrap-tpls-0.12.0
 //= require_tree ./angular_app/

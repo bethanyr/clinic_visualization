@@ -26,7 +26,7 @@
               = link_to 'View',interaction_path(medicine_id: medication.medicine_id)
     %label Select drug: 
     %select{'ng-model' => 'drug', 'ng-options' => 'interaction.interaction for interaction in interactions', placeholder: 'select drug'} 
-    %b{'ng-controller'=>'modalInteractionController'}  
+    %span{'ng-controller'=>'modalInteractionController'}  
       %script{type: 'text/ng-template', id: "modalDrug.html"}
         %div.modal-header
           %h3.modal-title Drug Interaction: {{ drug.interaction }}

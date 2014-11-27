@@ -9,11 +9,17 @@ app.controller "topNavController", ["$scope", "Patient", "userData", ($scope, Pa
     
   $scope.init()
 
-  $scope.changePatient =(new_patient)->
-    console.log(new_patient.id)
-    userData.update(id: $scope.selected_patient.id)
+  $scope.changePatient =(patient_id)->
+    console.log($scope.patients[patient_id].name)
+    userData.update(id: $scope.patients[patient_id].id)
 
   $scope.viewInteractions =(drug)->
     console.log(drug)
+
+  $scope.toggleDropdown = ($event) ->
+    $event.preventDefault()
+    $event.stopPropagation()
+    $scope.status.isopen = not $scope.status.isopen
+
 
 ]

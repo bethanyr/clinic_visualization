@@ -13,9 +13,14 @@
           %li
             = "Welcome #{current_user.doctor.try(:name)}, #{current_user.doctor.try(:specialty)}"
           %li 
-            Patient
-            %select{"ng-model" => "selected_patient", "ng-options" => "patient.name for patient in patients"}
-            %button{'ng-click' => 'changePatient(selected_patient)'} Change Patient
+            = "Patient: #{current_user.patient.try(:name)}"
+            .btn-group{:dropdown => "", "is-open" => "status.isopen"}
+              %button.btn.btn-primary.dropdown-toggle{"dropdown-toggle" => "", :type => "button", "ng-disabled"=>"disabled"} 
+                Change Patient
+                %span.caret
+              %ul.dropdown-menu{:role => "menu"}
+                %li{'ng-repeat' => 'patient in patients track by $index'}
+                  %a{:href => "", 'ng-click'=>'changePatient($index)'} {{ patient.name }}
           %li= link_to 'Sign out', destroy_user_session_path, :method=>'delete'
           %li= link_to 'Help', help_path
           - if current_user.admin?

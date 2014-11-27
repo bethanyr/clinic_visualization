@@ -13,4 +13,7 @@ app.controller "topNavController", ["$scope", "Patient", "userData", ($scope, Pa
     console.log(new_patient.id)
     userData.update(id: $scope.selected_patient.id)
 
+  $scope.viewInteractions =(drug)->
+    console.log(drug)
+
 ]

@@ -1,4 +1,4 @@
-%h2 Medications
+%h2{"ng-init"=>"interactions = #{@interactions}"} Medications
 %h3 Current Medication
 %table.table.table-striped
   %thead
@@ -23,7 +23,8 @@
           = medication.dosage
         %td
           = link_to 'View',interaction_path(medicine_id: medication.medicine_id)
-%button Drug Interaction
+%select{'ng-model' => 'drug', 'ng-options' => 'interaction.interaction for interaction in interactions'} 
+%a{"ng-click" => "viewInteractions(drug)", href: "", class: "btn-primary"}View Interactions
 
 %h3 Past Medication History
 %table.table.table-striped

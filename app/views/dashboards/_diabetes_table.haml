@@ -1,4 +1,3 @@
-%h1 Diabetes Details
 %table.table.table-striped
   %thead
     %tr
@@ -10,7 +9,7 @@
       -@g.rows.each do |r|
         %tr
           %td 
-            = r.header
+            = link_to r.header, lab_tests_path
           -r.data.each do |dd|
             %td
               = dd.result if dd

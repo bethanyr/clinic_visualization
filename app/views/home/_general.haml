@@ -36,8 +36,8 @@
         %td
           = link_to condition.doctor.name, doctor_path(condition.doctor)
         %td
-          = link_to 'View Dashboard', "#{condition.name.downcase.gsub(/\s+/, "_")}_path"
-=link_to 'Add Medical Condition', root_path, {class: 'btn btn-primary'}
+          = link_to 'View Dashboard', dashboard_path(condition.name)
+
 
 %h3 Current Allergies
 %table.table.table-striped

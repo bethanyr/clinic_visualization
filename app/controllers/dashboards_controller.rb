@@ -105,7 +105,7 @@ class DashboardsController < ApplicationController
         hash_item = Hash.new 
         hash_item[:date] = d.to_date.strftime('%d-%b-%y')
         records.each do |record|
-          hash_item[record.name.downcase.tr(' ', '_')] = record.value
+          hash_item[record.name.downcase.tr(' ', '_')] = record.value ? record.value : 'null'
         end
         #hash_item[:link] = "http://google.com" if hash_item.size > 0
         array_med << hash_item

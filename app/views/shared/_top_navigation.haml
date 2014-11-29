@@ -6,12 +6,14 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "#"} Clinic Visualization
+      - if user_signed_in?
+        %a.navbar-brand{:href => ""}= "Clinic Visualization"
+        %a.navbar-brand{:href => ""}= "Welcome #{current_user.doctor.try(:name)}, #{current_user.doctor.try(:specialty)}"
+      - else
+        %a.navbar-brand{:href => ""} Clinic Visualization 
     .navbar-collapse.collapse
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
-          %li
-            = "Welcome #{current_user.doctor.try(:name)}, #{current_user.doctor.try(:specialty)}"
           %li 
             = "Patient: #{current_user.patient.try(:name)}"
             .btn-group{:dropdown => "", "is-open" => "status.isopen"}
@@ -22,9 +24,6 @@
                 %li{'ng-repeat' => 'patient in patients track by $index'}
                   %a{:href => "", 'ng-click'=>'changePatient($index)'} {{ patient.name }}
           %li= link_to 'Sign out', destroy_user_session_path, :method=>'delete'
-          %li= link_to 'Help', help_path
-          - if current_user.admin?
-            %li= link_to 'Admin', admin_root_path 
         - else
           %li= link_to 'Sign in', new_user_session_path
       
